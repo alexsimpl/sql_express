@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>.field{width: 180px;}</style>
+</head>
+<body>
+  <h1>Edit cage</h1>
+  <form action="/editCage" method="POST">
+    <input type="hidden" name="id" value="{{ cage.id }}"><br><br>
+    <label>Size</label><br>
+    <input type="text" name="size" value="{{ cage.size }}" class="field"><br><br>
+    <label>Animals</label>
+    <input type="text" name="idAnimal" value="{{ cage.idAnimal }}" class="field"><br><br>
+    <label>Zoos</label>
+    <input type="text" name="idZoo" value="{{ cage.idZoo }}" class="field"><br><br>
+    <input type="submit" value="Send"> 
+  </form>
+  <a href="/">Back to list cages</a>
+</body>
+</html>

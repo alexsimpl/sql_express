@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+  <style>.field{width: 180px;}</style>
+</head>
+<body>
+  <h1>Edit animal</h1>
+  <form action="/editAnimal" method="POST">
+    <input type="hidden" name="id" value="{{ animal.id }}">
+    <label>Name</label><br>
+    <input type="text" name="name" value="{{ animal.name }}" class="field"><br><br>
+    <label>Type</label>
+    <input type="text" name="type" value="{{ animal.type }}" class="field"><br><br>
+    <label>Age</label>
+    <input type="number" min="1" max="50" name="age" value="{{ animal.age }}" class="field">
+    <input type="submit" value="Send"> 
+  </form>
+  <a href="/">Back to list animals</a>
+</body>
+</html>

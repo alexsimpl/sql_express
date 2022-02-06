@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>List of cages</title>
+</head>
+<body>
+  <h3>List of cages</h3>
+  <p><a href="/">Main</a> </p>
+  <p><a href="/createCage">Add cage</a> </p>
+  <table>
+    <tr><th>Size</th><th>Animal</th><th>Zoo</th></tr>
+    {{#each cages}}
+      <tr>
+        <td>{{ this.size }}</td>
+        <td>{{ this.idAnimal }}</td>
+        <td>{{ this.idZoo }}</td>
+        <td>
+          <a href="/editCage/{{ this.id }}">Edit</a>
+          <form action="deleteCage/{{ this.id }}" method="POST" style="display:inline;">
+            <input type="submit" value="Delete">
+          </form>  
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</body>
+</html>

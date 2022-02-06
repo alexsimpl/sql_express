@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>List of animals</title>
+</head>
+<body>
+  <h3>List of animals</h3>
+  <p><a href="/">Main</a> </p>
+  <p><a href="/createAnimal">Add animal</a> </p>
+  <table>
+    <tr><th>Name</th><th>Type</th><th>Age</th></tr>
+    {{#each animals}}
+      <tr>
+        <td>{{ this.name }}</td>
+        <td>{{ this.type }}</td>
+        <td>{{ this.age }}</td>
+        <td>{{ this.size }}</td>
+        <td>
+          <a href="/editAnimal/{{ this.id }}">Edit</a>
+          <form action="deleteAnimal/{{ this.id }}" method="POST" style="display:inline;">
+            <input type="submit" value="Delete">
+          </form>  
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</body>
+</html>

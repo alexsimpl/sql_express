@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Add animal</title>
+  <style>.field{width: 180px;}</style>
+</head>
+<body>
+  <h1>Add animal</h1>
+  <form method="POST">
+    <label>Name</label>
+    <input name="name" class="field"><br><br>
+    <label>Type</label>
+    <input name="type" class="field"><br><br>
+    <label>Age</label>
+    <input name="age" type="number" min="1" max="50" class="field"><br><br>
+    <label>Size</label>
+    <select name="size" class="field">
+      <option value="small" selected>small</option>
+      <option value="medium">medium</option>
+      <option value="size">big</option>
+    </select>
+    <input type="submit" value="Send">
+  </form>
+  <a href="/indexAnimal">Back to</a>
+</body>
+</html>

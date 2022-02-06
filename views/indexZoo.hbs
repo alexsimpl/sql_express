@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>List of zoos</title>
+</head>
+<body>
+  <h3>List of zoos</h3>
+  <p><a href="/">Main</a> </p>
+  <p><a href="/createZoo">Add zoo</a> </p>
+  <table>
+    <tr><th>Name</th><th>Address</th><th>Phone</th><th>Email</th></tr>
+    {{#each zoos}}
+      <tr>
+        <td>{{ this.name }}</td>
+        <td>{{ this.address }}</td>
+        <td>{{ this.phone }}</td>
+        <td>{{ this.email }}</td>
+        <td>
+          <a href="/editZoo/{{ this.id }}">Edit</a>
+          <form action="deleteZoo/{{ this.id }}" method="POST" style="display:inline;">
+            <input type="submit" value="Delete">
+          </form>  
+        </td>
+      </tr>
+    {{/each}}
+  </table>
+</body>
+</html>
